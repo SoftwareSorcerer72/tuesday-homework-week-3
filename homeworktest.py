@@ -15,11 +15,9 @@ class Employee:
 
     def give_raise(self):
         self.salary = (self.salary * Employee.raise_amount)
-        print(f"Good job {self.first_name}! You've earned a raise! Your new salary is {self.salary}.")
+        print(f"Good job {self.first_name}! You've earned a raise! Your new salary is {self.salary}")
 
-e =(Employee("john", "doe", "developer", "somethingrandom@gmail.com", 52000))
 
-e.give_raise()
 
 class Sales(Employee):
     def __init__(self, first_name, last_name, job_title, email, salary, phone_number):
@@ -27,11 +25,26 @@ class Sales(Employee):
         self.phone_number = phone_number
 
     def send_followup_email(self, customer_name):
-        print(f"\tDear {customer_name}, \n Thank you for your interest in our product. Please let me know if you have any questions. My email is {self.email} and my phone number is {self.phone_number}. \n\n Thanks, \n {self}")
+        print(f"\tDear {customer_name}, \nThank you for your interest in our product. Please let me know if you have any questions. My email is {self.email} and my phone number is {self.phone_number}. \n\n Thanks, \n {self}")
 
 class Developer(Employee):
     def write_code(self):
         print(f"{self} is writing code!")
 
-d = Developer('James', 'Doe Jr.', 'Software Developer', 'john.doe@example.com', 70000)
-d.write_code()
+
+
+sales_employee = Sales('Jane', 'Doe', 'Sales', 'anotheremail@gmail.com', 50000, '(123) 456-7890')
+
+sales_employee.send_followup_email("Mike O'Neil")
+
+sales_employee = Sales('Jane', 'Doe', 'Sales', 'anotheremail@gmail.com', 50000, '(123) 456-7890')
+
+sales_employee.send_followup_email("Hannah Stern")
+
+sales_employee.give_raise()
+
+developer_employee = Developer('James', 'Doe Jr.', 'Software Developer','james.doe@gmail.com', 100000) 
+
+developer_employee.write_code()
+
+developer_employee.give_raise()
