@@ -20,3 +20,14 @@ class Employee:
 e =(Employee("john", "doe", "developer", "somethingrandom@gmail.com", 52000))
 
 e.give_raise()
+
+class Sales(Employee)
+    def __init__(self, first_name, last_name, job_title, email, salary, phone_number):
+        super().__init__(first_name, last_name, job_title, email, salary)
+        self.phone_number = phone_number
+        
+    
+
+
+class Developer(Employee):
+    
