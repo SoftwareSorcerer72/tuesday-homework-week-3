@@ -6,8 +6,3 @@ def area_of_circle(radius):
 def pythagorean_theorem(a, b):
     return sqrt(a ** 2 + b ** 2)
 
-answer = area_of_circle(7)
-print(answer)
-
-answer2 = pythagorean_theorem(3, 4)
-print(answer2)
