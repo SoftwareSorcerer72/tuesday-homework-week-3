@@ -14,7 +14,7 @@ class Employee:
         return f"{self.first_name} {self.last_name}"
 
     def give_raise(self):
-        self.salary = (self.salary * Employee.raise_amount)
+        self.salary = round(self.salary * Employee.raise_amount)
         print(f"Good job {self.first_name}! You've earned a raise! Your new salary is {self.salary}")
 
 
